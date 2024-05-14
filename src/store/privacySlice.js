@@ -3,10 +3,10 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const privacySlice = createSlice({
     name: 'privacy',
-    initialState: false,
+    initialState: {privacy: false},
     reducers: {
       privacyToggle: (state) => {
-        return state = !state
+        state.privacy = !state.privacy
       }
     }
   })
