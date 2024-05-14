@@ -1,11 +1,12 @@
 import { useDispatch } from "react-redux"
 import { useRef } from "react"
+import { counterActions } from "../store"
 
 function Controls(){
-  const dispatch = useDispatch()
   const inputValElem = useRef()
-  const decrement = () => dispatch({type: 'DECREMENT'})
-  const increment = () => dispatch({type: 'INCREMENT'})
+  const dispatch = useDispatch()
+  const decrement = () => dispatch(counterActions.decrement());
+  const increment = () => dispatch(counterActions.increment());
   const addition = () => {
     dispatch({type: 'ADDITION',payload:{number: inputValElem.current.value},})
     inputValElem.current.value = ""
