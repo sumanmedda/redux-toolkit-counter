@@ -9,7 +9,7 @@ import PrivacyMessage from '../components/PrivacyMessage'
 
 function App() {
 
-  const privacyValue = useSelector(state => state.privacy)
+  const { privacyValue } = useSelector(state => state.privacy)
   
   return (
     <center className="px-4 py-5 my-5 text-center">
